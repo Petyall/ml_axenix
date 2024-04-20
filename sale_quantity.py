@@ -20,7 +20,7 @@
 import pandas as pd
 
 # Read the CSV file
-df = pd.read_csv('data_hakaton1.csv')
+df = pd.read_csv('data_copy.csv')
 
 # Convert date columns to datetime format
 df['Sale_Date'] = pd.to_datetime(df['Sale_Date'])
@@ -48,5 +48,5 @@ monthly_sales = monthly_sales.merge(yearly_totals[['Year', 'Month', 'Success']],
 monthly_sales['Success'] = monthly_sales['Success'].fillna(0)
 
 # Write the results to a new CSV file
-monthly_sales.to_csv('monthly_sales_comparison.csv', index=False)
+monthly_sales.to_csv('data_copy.csv', index=False)
 
